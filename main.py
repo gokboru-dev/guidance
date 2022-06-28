@@ -2,7 +2,6 @@ from distutils.log import error
 #import detection
 import numpy
 
-
 def app(theAxis:str, aDegree:float,  aPixel:float):
     
     if theAxis == "x" or theAxis == "X":
