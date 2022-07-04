@@ -1,6 +1,12 @@
+###################################################################
+### Developer(s): umutzan2, ismailtrm                           ###
+### Last Update: 4/07/2022 by ismailtrm                         ###
+### Notes: upper red and lower red, configured with using cam.  ###
+###                                                             ###
+###################################################################
+
 import cv2
 import numpy as np
-
 
 def guidance(theColor, video, xDegree, yDegree, xPixel, yPixel):
 
