@@ -1,7 +1,7 @@
 ###################################################################
 ### Developer(s): umutzan2, ismailtrm                           ###
 ### Last Update: 4/07/2022 by ismailtrm                         ###
-### Notes: upper red and lower red, configured with using cam.  ###
+### Notes: edited for a new list desing.                        ###
 ###                                                             ###
 ###################################################################
 
