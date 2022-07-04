@@ -2,7 +2,7 @@ import cv2
 from guidance import guidance
 
 cap = cv2.VideoCapture("http://192.168.42.129:4747/mjpegfeed")
-
+ 
 while True:
     success, video = cap.read()
     width = int(cap.get(3))
