@@ -13,6 +13,8 @@ cap = cv2.VideoCapture(0) #cap = cv2.VideoCapture("1")
 upper_red = np.array([255, 255, 255])
 lower_red = np.array([171, 160, 60])
 
+
+
 while True:
     success, video = cap.read()
     width = int(cap.get(3))
