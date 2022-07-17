@@ -6,9 +6,11 @@
 ###################################################################
 
 import cv2
+from traitlets import import_item
 from theScript import guidance
+#import mavlink
 
-cap = cv2.VideoCapture("http://192.168.42.129:4747/mjpegfeed")
+cap = cv2.VideoCapture(0)
 
 while True:
     success, video = cap.read() #calling for a cam.

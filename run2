@@ -1,0 +1,32 @@
+import cv2
+import math
+from theScript import pidControl, guidance
+
+cap = cv2.VideoCapture(0)
+
+while True:
+    success, video = cap.read() #calling for a cam.
+    width = int(cap.get(3))     #screen has created.
+    height = int(cap.get(4))
+
+    xD, yD = guidance("red", video, 135, 135, width, height)
+    # parametreler
+    ref = 0
+    Kpid = [0.25, 0.001, 0.0001]
+    dt = 1
+    h0 = xD
+    step = 1500
+
+# sistem modeli
+    sys_model = lambda x: 0.1*math.pow(x, 2)
+
+    ctrl = pidControl(ref, dt, Kpid)
+    ctrl.set_sys_model(sys_model)
+
+    output = [h0]
+    for i in range(step):
+        last_fb = output[-1]
+        x = ctrl.one_shot(last_fb)
+        output.append(x + last_fb)
+
+    print(output)
